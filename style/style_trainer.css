@@ -1,0 +1,72 @@
+/* Estilos CSS para la página */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body {
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .add-exercise {
+    text-align: center;
+  }
+  .add-exercise input[type="text"],
+  .add-exercise input[type="submit"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .add-exercise input[type="text"] {
+    width: 80%;
+  }
+  .add-exercise input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+  }
+  /* Estilos CSS para el navbar */
+  .navbar {
+    background-color: #4CAF50;
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .navbar a.active {
+    background-color: #ddd;
+    color: black;
+  }
+  .navbar-right {
+    float: right;
+  }
