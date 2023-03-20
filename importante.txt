@@ -1,0 +1,43 @@
+---------------- se añade la base de datos actual al git
+------- leer toooodo sapa*
+segun yoooooo
+toca hacer tablas de:
+-relacion actividad adulto mayor para poder asignarle
+-adulto mayor, entrenador que lo guia para que aparezca donde es
+-actividad, progreso adulto mayor para el reporte del entrenador y el progreso en rol tabla_de_adultos_mayores
+-quiero que se guarde en la tabla ejercicios imagen para que el adulto mayor tenga interaccion
+
+quieroooo
+- aparezca el nombre del entrenador _ adulto mayor que inicie sesion
+- cambiar cosas del perdil de usuario, pero la interfaz ta fea idk
+- la busqueda de adultos mas chevre lo mismo esta fea, creo q es con js mirar ejemplo
+
+
+funciona
+- busqueda
+- visualizacion de adultos
+- actualizacion del Perfil
+- añadir y eliminar ejercicios
+- reporte , pero no por adulto mayor aun.
+-
+
+que falta 
+- usar js pa que aja pero falta
+- actividades e imagenes
+- validar actividades con adulto mayor-
+- registrar progreso de actividades
+- UX ADAPTABLE (VALERIA)
+
+eso es lo que yo entendi del ejercicio, estamos abiertas a cambios y modificaciones, listuuuu
+
+NOTA 1: leer comentarios de los archivos a veces ayuda. 
+    |   |
+    |   |
+    |   |
+  __|   |__
+  \       /
+   \     /
+    \   /
+     \ /
+      V
+Nota 2: Bendito chat gpt y que mrk tan desocupada jajsjaj

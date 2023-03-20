@@ -11,7 +11,7 @@
     </div>
         <div class="actividades">
       <div class="fila">
-        <div class="actividad">
+        <div class="actividad"> <!-- No se como hacer que guarde imagenes en la base de datos -->
           <img src="actividad1.jpg" alt="Actividad 1">
           <h3>Yoga matutino</h3>
           <p>Realiza ejercicios de estiramiento y relajación para empezar tu día con energía.</p>

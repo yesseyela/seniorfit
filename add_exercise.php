@@ -11,49 +11,39 @@
     </div>
     <div class="container">
       <h1>Entrenador</h1>
-      <h2>Bienvenido, [nombre del entrenador]</h2>
-        <form method="post" action="add_exercise.php" class="form-inline">
+      <h2>Bienvenido, [nombre del entrenador]</h2> 
+        <form method="post" action="add_exercise1.php" class="form-inline"> <!--añade los ejercicios en la tabla ejercicios-->
             <div class="form-group">
                 <label for="exercise">Nombre del ejercicio:</label>
                 <input type="text" class="form-control" id="exercise" name="exercise">
             </div>
             <button type="submit" class="btn btn-default">Agregar</button>
         </form>
+        <br>
       <table>
         <thead>
           <tr>
             <th>Nombre del ejercicio</th>
             <th>Última fecha de adición</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           <?php
-            // Conectar a la base de datos
-            $conexion = mysqli_connect("localhost", "usuario", "contraseña", "nombre_de_la_base_de_datos");
-            
-            // Verificar si la conexión fue exitosa
-            if (!$conexion) {
-              die("Conexión fallida: " . mysqli_connect_error());
-            }
-            
-            // Obtener los ejercicios registrados
-            $sql = "SELECT * FROM ejercicios";
-            $result = mysqli_query($conexion, $sql);
-            
-            // Mostrar los ejercicios en la tabla
-            if (mysqli_num_rows($result) > 0) {
-              while($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>";
-                echo "<td>" . $row["nombre"] . "</td>";
-                echo "<td>" . $row["fecha_adicion"] . "</td>";
-                echo "</tr>";
-              }
-            } else {
-              echo "<tr><td colspan='2'>No se encontraron ejercicios registrados.</td></tr>";
-            }
-            
-            // Cerrar la conexión a la base de datos
-            mysqli_close($conexion);
+          include 'conecta.php';
+          $bd = conectar();
+          $query = "SELECT * FROM ejercicios";
+          $result = mysqli_query($bd, $query);
+          while ($row = mysqli_fetch_array($result)) {
+              echo "<tr>";
+              echo "<td>" . $row['nombre_ejercicio'] . "</td>";
+              echo "<td>" . $row['fecha_adicion'] . "</td>";
+              echo "<td><a href='delete_exercise.php?id=" . $row['id_ejercicio'] . "'>Eliminar</a>
+              |<a href='imagen.php?id=" . $row['id_ejercicio'] . "'>Imagen</a></td>";
+              ///no funciona el link de imagen
+              echo "</tr>";
+          }
+          mysqli_close($bd);
           ?>
         </tbody>
       </table>

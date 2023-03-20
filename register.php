@@ -17,7 +17,7 @@
       <br>
 
       <h1>Registro de Adulto Mayor</h1>
-    <form action="register_adulto.php" method="POST">
+    <form action="reg_usu.php" method="POST">
       <div class="form-group">
         <label for="nombre">Nombre y apellido:</label>
         <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -25,6 +25,10 @@
       <div class="form-group">
         <label for="cedula">Cédula:</label>
         <input type="number" class="form-control" id="cedula" name="cedula" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="number" class="form-control" id="telefono" name="telefono" required>
       </div>
       <div class="form-group">
         <label for="edad">Edad:</label>
@@ -43,26 +47,26 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="tipo_usuario">Tipo de usuario:</label>
+        <label for="tipo_usuario">Tipo de Usuario:</label>
         <select class="form-control" id="tipo_usuario" name="tipo_usuario" required>
           <option value="Adulto Mayor">Adulto Mayor</option>
           <option value="Entrenador">Entrenador</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="email">Correo electrónico:</label>
+        <label for="email">Correo Electrónico:</label>
         <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre_usuario">Nombre de usuario:</label>
+        <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" required>
       </div>
       <div class="form-group">
         <label for="password">Contraseña:</label>
         <input type="password" class="form-control" id="password" name="password" required>
       </div>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
     </form>
   </div>
-    <button type="submit" class="btn btn-primary">Registrarse</button>
-    <p>¿Ta tienes una cuenta? <a href="index.php">Iniciar sesión</a></p>
-    <div class="volver">
-      <a href="index.php"><button>Volver al inicio</button></a>
-    </div>
 </body>
 </html>

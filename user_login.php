@@ -18,7 +18,7 @@
         display: block;
         margin-bottom: 10px;
       }
-      input[type="email"],
+      input[type="text"],
       input[type="password"] {
         width: 100%;
         padding: 10px;
@@ -42,18 +42,17 @@
     </style>
   </head>
   <body>
-    <h1>Iniciar sesión como adulto mayor</h1>
-    <form method="post" action="trainer_login.php">
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
+  <h1>Iniciar sesión a seniorfit</h1>
+    <form method="post" action="login.php">
+      <label for="nombre_usuario">Nombre de usuario:</label>
+      <input type="text" id="nombre_usuario" name="nombre_usuario" required>
       <label for="password">Contraseña:</label>
       <input type="password" id="password" name="password" required>
-     
+      <button type="submit">Iniciar sesión</button>
     </form>
-    <a href="adulto_home.php"><input type="submit" value="Iniciar sesión"></a>
     <p>¿No tienes una cuenta? <a href="register.php">Regístrate</a></p>
     <div class="volver">
       <a href="index.php"><button>Volver al inicio</button></a>
     </div>
-  </body>
+</body>
 </html>

@@ -8,77 +8,38 @@
   <body>
     <div>
     <?php include 'base_trainer.php'; ?>
-    </div>
+    </div> <!--- no se comohacer la relacion ejercicio adulto mayor-->
     <div class="cointainer">
         <h1>Entrenador</h1>
         <h2>Bienvenido, [nombre del entrenador]</h2>
-        <form method="post" action="buscar_ejercicios.php" class="form-inline">
-            <div class="form-group">
-                <label for="busqueda">Buscar por nombre:</label>
-                <input type="text" class="form-control" id="busqueda" name="busqueda">
-            </div>
-            <button type="submit" class="btn btn-default">Buscar</button>
-        </form>
+        <form method="post" action="asignar_ejercicio.php">
         <table>
         <thead>
             <tr>
             <th>Nombre del ejercicio</th>
-            <th>Última fecha de adición</th>
-            <th>Acciones</th>
+            <th>Habilitado</th>
             </tr>
         </thead>
         <tbody>
-            <?php
-            // Conexión a la base de datos
-            $servername = "localhost";
-            $username = "username";
-            $password = "password";
-            $dbname = "myDB";
-            $conn = new mysqli($servername, $username, $password, $dbname);
+           <?php
+            include 'conecta.php';
+            $bd = conectar();
 
-            // Consulta a la base de datos
-            $sql = "SELECT id, nombre, fecha_adicion, habilitado FROM ejercicios";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                // Mostrar los resultados en la tabla
-                while($row = $result->fetch_assoc()) {
-                    $id = $row["id"];
-                    $nombre = $row["nombre"];
-                    $fecha_adicion = $row["fecha_adicion"];
-                    $habilitado = $row["habilitado"];
-
-                    // Mostrar el nombre y la fecha de adición
-                    echo "<tr>";
-                    echo "<td>" . $nombre . "</td>";
-                    echo "<td>" . $fecha_adicion . "</td>";
-
-                    // Mostrar el botón para habilitar o deshabilitar el ejercicio
-                    echo "<td>";
-                    if ($habilitado == 1) {
-                        echo "<form method='post' action='deshabilitar_ejercicio.php'>";
-                        echo "<input type='hidden' name='id' value='" . $id . "'>";
-                        echo "<button type='submit' class='btn btn-danger'>Deshabilitar</button>";
-                        echo "</form>";
-                    } else {
-                        echo "<form method='post' action='habilitar_ejercicio.php'>";
-                        echo "<input type='hidden' name='id' value='" . $id . "'>";
-                        echo "<button type='submit' class='btn btn-success'>Habilitar</button>";
-                        echo "</form>";
-                    }
-                    echo "</td>";
-
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='3'>No se encontraron resultados</td></tr>";
+            $query = "SELECT * FROM ejercicios";
+            $result = mysqli_query($bd, $query);
+            while ($row = mysqli_fetch_array($result)) {
+              echo "<tr>";
+              echo "<td>" . $row['nombre_ejercicio'] . "</td>";
+              // Mostrar un checkbox para habilitar/deshabilitar el ejercicio
+              echo "<td><input type='checkbox' name='ejercicio_" . $row['id_ejercicio'] . "' value='1'></td>";
+              echo "</tr>";
             }
-
-            // Cerrar la conexión a la base de datos
-            $conn->close();
-            ?>
+            mysqli_close($bd);
+           ?>
         </tbody>
         </table>
+        <input type="submit" value="Guardar cambios">
+        </form>
     </div>
     </body>
 </html>

@@ -9,7 +9,7 @@
     <div>
     <?php include 'base_adulto.php'; ?>
     </div>
-    
+    <!-- hacer un tipo instructivo o bienvenida al adulto mayor--->
 
     </body>
 </html>

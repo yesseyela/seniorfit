@@ -17,8 +17,7 @@
         <br>
 
         <div class="cont">
-          <a href="trainer_login.php"><button class="btn btn-primary">Iniciar sesión como entrenador</button></a>
-          <a href="user_login.php"><button class="btn btn-primary">Iniciar sesión como adulto mayor</button></a>
+          <a href="user_login.php"><button class="btn btn-primary">Iniciar sesión</button></a>
           <a href="register.php"><button class="btn btn-secondary">Registrarse</button></a>
         </div>
     </div>

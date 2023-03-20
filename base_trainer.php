@@ -12,8 +12,7 @@
   <div class="navbar">
       <a href="trainer_home.php">Lista Adultos Mayores</a>
       <a href="add_exercise.php">Añadir Ejercicio</a>
-      <a href="asing_exercise.php">Asignar Ejercicio</a>
-      <a href="reporte_trainer.php">Generar Reporte</a>
+      <a href="buscar.php">Buscar adulto</a>
       <a href="perfil_trainer.php">Perfil</a>
       <div class="navbar-right">
         <a href="index.php">Cerrar Sesión</a>
